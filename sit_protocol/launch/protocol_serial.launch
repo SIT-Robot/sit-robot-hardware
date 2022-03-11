@@ -1,0 +1,14 @@
+<launch>
+    <arg name="serial_port" default="/dev/ttyUSB0"/>
+    <arg name="baud_rate" default="115200"/>
+
+    <node pkg="sit_protocol"
+        type="protocol_forwarder_node"
+        name="protocol_forwarder"
+        output="screen"
+        respawn="true">
+
+        <param name="serial_port" value="$(arg serial_port)"/>
+        <param name="baud_rate" value="$(arg baud_rate)"/>
+    </node>
+</launch>

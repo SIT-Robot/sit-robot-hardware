@@ -1,0 +1,13 @@
+# 发送请求数据帧
+sit_protocol_msgs/CmdDataFrame request
+
+# 等待响应的数据帧指令值
+uint8 waitCmd
+
+# 超时时间(单位ms) 默认值100ms
+uint16 timeout = 100
+
+---
+
+# 接收响应数据帧
+sit_protocol_msgs/CmdDataFrame response

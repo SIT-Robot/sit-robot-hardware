@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="k" default="-4772.44"/>
+    <arg name="radius" default="0.1900"/>
+    <node pkg="sit_chassis" type="three_chassis_node" name="chassis_node" output="screen">
+        <param name="k" value="$(arg k)"/>
+        <param name="radius" value="$(arg radius)"/>
+    </node>
+</launch>
